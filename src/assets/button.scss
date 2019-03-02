@@ -1,0 +1,30 @@
+.button{
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius:7px;
+    font-size: 18px;
+    border:0px;
+    font-weight: bold;
+    color:#fff;
+    background:linear-gradient(180deg, rgba(206, 34, 34, 0.938),rgba(172, 34, 206, 0.877), rgba(34, 94, 206, 0.932));
+    background-size: auto 400%;
+    background-position: 0px 0%;
+    transition-duration: 1.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    outline:none;
+    &:hover{
+        background-position: 0px 200%;
+        transition-duration: 0.7s;
+        box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.8);
+    }
+    &:active{
+        transition-duration: 0.2s;
+        box-shadow:  0px 0px 40px rgba(255, 0, 0, 0.897),
+                     0px  0px 20px rgba(41, 212, 255, 0.911);
+    }
+    &.disabled{
+        
+        color:#777;
+        background:#ccc;
+    }
+}

@@ -1,0 +1,28 @@
+.app{
+    text-align:center;
+}
+
+body{
+    background: linear-gradient(223deg, #4f1cfe, #771cfe, #feb91c, #1cfeb6, #1c9cfe);
+    background-size: 1000% 1000%;
+    
+    -webkit-animation: AnimationName 42s ease infinite;
+    -moz-animation: AnimationName 42s ease infinite;
+    animation: AnimationName 42s ease infinite;
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 17%}
+        50%{background-position:100% 84%}
+        100%{background-position:0% 17%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 17%}
+        50%{background-position:100% 84%}
+        100%{background-position:0% 17%}
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 17%}
+        50%{background-position:100% 84%}
+        100%{background-position:0% 17%}
+    }
+}

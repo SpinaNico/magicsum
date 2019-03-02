@@ -1,0 +1,22 @@
+.box{
+    padding: 20px 30px;
+    border-radius: 3px;
+    min-height: 100px;
+    
+   .title{
+       border-radius: 10px;
+       background-color:#fff;
+       color:#333;
+       position: relative;
+       transform: translate(0px -50px);
+       padding:5px 5px;
+       position: relative;
+   }
+
+   .container{
+       position: relative;
+       margin:15px;
+   }
+}
+
+

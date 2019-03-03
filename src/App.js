@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import DonataionPage from './donataion-page';
+import Repository from './repository-page';
 import './app.scss';
 import "./assets/textarea.scss";
 import "./assets/other.scss";
@@ -21,7 +23,7 @@ class App extends Component {
   constructor(props){
     super();
     this.props = props;
-    this.my_place = `spaghetti 3.50$ \npizza 5,70$\nhamburger 6.8$
+    this.my_place = `spaghetti 1 3.50$ \npizza 1 5,70$\nhamburger 2 6.8$\n
     `;
     this.state = {
 
@@ -29,10 +31,10 @@ class App extends Component {
       active_float_comma: true,
       active_float_dot: true,
 
-      sum_total:0,
-      sum_float_comma:0,
-      sum_float_dot:0,
-      sum_int:0
+      sum_total:20,
+      sum_float_comma:5.7,
+      sum_float_dot:10.3,
+      sum_int:4
     };
     this._editable = React.createRef();
     
@@ -40,8 +42,6 @@ class App extends Component {
     this.re_for_float_with_comma = /\b\d+,\d+\b/mgi;
     this.re_for_int = /\b\d+\b/mgi;
   }
-
-
 
   calc_deciamal_with_comma(text){
 
@@ -115,8 +115,6 @@ class App extends Component {
    console.log(this.state)
   }
 
-
-
   render() {
     return (
       <div className="app">
@@ -149,9 +147,9 @@ class App extends Component {
           ref={this._editable}
 
           className="text-area"
-          onKeyDown={(e)=>{setTimeout(()=>this.search_on_text(),20);}}  
-          placeholder={this.my_place} 
-        />
+          onKeyDown={(e)=>{setTimeout(()=>this.search_on_text(),20);}}
+          //onLoad={(e)=>{setTimeout(()=>this.search_on_text(),100);}}    
+        >{this.my_place}</textarea>
 
         <div className="box output">
           <div className="grid-output">
@@ -163,12 +161,12 @@ class App extends Component {
         </div>
       
 
-        <div className="thanks">
-
-        </div>
+          <DonataionPage/>
+          <Repository/>
+         
 
         <div className="foot-fill"></div>
-        <div className="bottom-foot"></div>
+        <div className="bottom-foot"><a target="blanck" href="https://spinanico.com">spinanico.com</a></div>
 
       </div>
 
